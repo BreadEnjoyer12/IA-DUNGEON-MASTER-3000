@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfvhr8ejmb66v"]
+
+[ext_resource type="Script" path="res://esenciales/dialogo manager/dialoge.gd" id="1_0vufm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bmvh6"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_sasl3"]
+font_size = 35
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_0vufm")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -169.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="hablante" type="Label" parent="Panel"]
+layout_mode = 1
+offset_right = 388.0
+offset_bottom = 40.0
+label_settings = SubResource("LabelSettings_bmvh6")
+
+[node name="texto_dialogo" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -531.0
+offset_top = -25.5
+offset_right = 550.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_sasl3")
+
+[node name="opciones_container" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
