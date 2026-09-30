@@ -6,27 +6,16 @@ extends Area2D
 									   #variables exportables
 @export_multiline var dialogo = ""
 
-var jugador_cerca = false
-
-func _on_body_entered(body):
-	if body.is_in_group("jugador"):
-		jugador_cerca = true
-		body.registrar_interactuable(self)
-
-
-
-
-func _on_body_exited(body):
-	if body.is_in_group("jugador"):
-		jugador_cerca = false
-		body.eliminar_interactuable(self)
-
+@export var dialogo_inicial: NodoDialogo = null
 
 
 func interactuar():
-
-	awawawa.play()
-
-	var lineas = dialogo.split("\n")
-
-	Dialoge.mostrar_dialogo(nombre, lineas)
+	print("1 - interactuar llamado, dialogo_inicial = ", dialogo_inicial)
+	if dialogo_inicial != null:
+		print("2 - entrando al sistema nuevo")
+		awawawa.play()
+		Dialoge.mostrar_dialogo_avanzado(nombre, dialogo_inicial)
+	elif dialogo.strip_edges() != "":
+		print("2 - entrando al sistema viejo")
+		awawawa.play()
+		Dialoge.mostrar_dialogo(nombre, dialogo.split("\n"))

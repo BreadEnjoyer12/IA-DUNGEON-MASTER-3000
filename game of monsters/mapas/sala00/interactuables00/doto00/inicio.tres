@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="NodoDialogo" load_steps=7 format=3 uid="uid://b8m4ji4jked53"]
+
+[ext_resource type="Script" path="res://nodo_dialogo.gd" id="1_vsbrf"]
+[ext_resource type="Resource" uid="uid://cuo6me7umg0fw" path="res://mapas/sala00/interactuables00/doto00/opcion1.tres" id="1_xfe17"]
+[ext_resource type="Script" path="res://opcion_dialogo.gd" id="2_gx3p3"]
+[ext_resource type="Resource" uid="uid://b3jfn2l1ws2x4" path="res://mapas/sala00/interactuables00/doto00/opcion2.tres" id="3_glb45"]
+
+[sub_resource type="Resource" id="Resource_b3vfv"]
+script = ExtResource("2_gx3p3")
+texto_opcion = "si"
+destino = ExtResource("1_xfe17")
+
+[sub_resource type="Resource" id="Resource_4pi6w"]
+script = ExtResource("2_gx3p3")
+texto_opcion = "no"
+destino = ExtResource("3_glb45")
+
+[resource]
+script = ExtResource("1_vsbrf")
+texto = "awawawa 
+meisho 
+doto detsu 
+adrian es puto ?"
+hablante = "meisho doto"
+opciones = Array[ExtResource("2_gx3p3")]([SubResource("Resource_b3vfv"), SubResource("Resource_4pi6w")])

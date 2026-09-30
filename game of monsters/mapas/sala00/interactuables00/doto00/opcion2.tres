@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NodoDialogo" load_steps=3 format=3 uid="uid://b3jfn2l1ws2x4"]
+
+[ext_resource type="Script" path="res://nodo_dialogo.gd" id="1_i4cvo"]
+[ext_resource type="Resource" uid="uid://wwmnv6sdui0m" path="res://mapas/sala00/interactuables00/doto00/final.tres" id="2_4yvej"]
+
+[resource]
+script = ExtResource("1_i4cvo")
+texto = "ya veo... 
+tu eres puto tambien..."
+hablante = "meisho doto"
+opciones = Array[Resource("res://opcion_dialogo.gd")]([])
+siguiente = ExtResource("2_4yvej")
